@@ -3,15 +3,19 @@
 <html lang="en" data-google-analytics-opt-out=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SNAP Bridge Loan Program</title>
+  <title>SNAP Mutual Aid -- Short-term Loans</title>
   <link rel="stylesheet" href="./index_files/style.css">
 </head>
 <body>
   <div class="public-container">
     <!-- Header -->
     <header class="public-header">
-      <h1>SNAP Bridge Loan Program</h1>
-      <p class="subtitle">During the government shutdown, SNAP benefits are paused. This program connects people who need emergency assistance with individuals willing to provide interest-free bridge loans. Once SNAP benefits resume (and are paid retroactively), loans will be repaid.</p>
+      <h1>SNAP Mutual Aid -- Short-term Loans</h1>
+      <p class="subtitle">Due to the government shutdown, it looks like SNAP benefits will be paused unless something changes soon. We want to connect people in the community who need emergency assistance with individuals willing to provide interest-free bridge loans. Once SNAP benefits resume, loans can begin repayment at a mutually agreed upon schedule.</p>
+	  <br>
+	  <p class="subtitle">After you fill out your information below, we will follow up within a few days with more information. Please contact <a href="mailto:snap@shimanuki.cc">snap@shimanuki.cc</a> with any questions.</p>
+	  <br>
+	  <p class="subtitle">-Luke</p>
     </header>
 
     <!-- Main Form Section -->
@@ -23,11 +27,11 @@
           <div class="role-buttons">
             <button class="btn btn--lg role-btn active" id="recipientBtn" data-role="recipient">
               <span class="role-title">I Need Help</span>
-              <span class="role-subtitle">I'm a SNAP Recipient</span>
+              <span class="role-subtitle">I'm a SNAP recipient</span>
             </button>
             <button class="btn btn--lg role-btn" id="lenderBtn" data-role="lender">
               <span class="role-title">I Want to Help</span>
-              <span class="role-subtitle">I'm a Lender</span>
+              <span class="role-subtitle">I want to lend</span>
             </button>
           </div>
         </div>
@@ -45,15 +49,15 @@
               <div class="radio-group">
                 <label class="radio-label">
                   <input type="radio" name="contactMethod" value="email" required="">
-                  <span>Email + Zip Code</span>
+                  <span>Email</span>
                 </label>
                 <label class="radio-label">
                   <input type="radio" name="contactMethod" value="phone">
-                  <span>Phone (SMS) + Zip Code</span>
+                  <span>Phone (must be able to receive SMS)</span>
                 </label>
                 <label class="radio-label">
                   <input type="radio" name="contactMethod" value="mail">
-                  <span>Mailing Address (can be a service provider address if you do not have your own)</span>
+                  <span>Address where you can receive mail (can be a service provider address that allows you to receive mail if you do not have your own address)</span>
                 </label>
               </div>
             </div>
@@ -61,8 +65,8 @@
             <!-- Email Fields -->
             <div id="emailFields" class="contact-fields" style="display: none;">
               <div class="form-group">
-                <label for="recipientFirstName" class="form-label">First Name</label>
-                <input type="text" id="recipientFirstName" class="form-control" placeholder="Your first name">
+                <label for="recipientFirstName" class="form-label">Full Name</label>
+                <input type="text" id="recipientFirstName" class="form-control" placeholder="Your full name">
               </div>
               <div class="form-group">
                 <label for="recipientEmail" class="form-label">Email</label>
@@ -77,13 +81,12 @@
             <!-- Phone Fields -->
             <div id="phoneFields" class="contact-fields" style="display: none;">
               <div class="form-group">
-                <label for="recipientPhoneName" class="form-label">First Name</label>
-                <input type="text" id="recipientPhoneName" class="form-control" placeholder="Your first name">
+                <label for="recipientPhoneName" class="form-label">Full Name</label>
+                <input type="text" id="recipientPhoneName" class="form-control" placeholder="Your full name">
               </div>
               <div class="form-group">
                 <label for="recipientPhone" class="form-label">Phone Number</label>
                 <input type="tel" id="recipientPhone" class="form-control" placeholder="(555) 123-4567">
-                <small class="form-help">We'll send you a text message (SMS) to confirm</small>
               </div>
               <div class="form-group">
                 <label for="recipientPhoneZip" class="form-label">Zip Code</label>
@@ -94,8 +97,8 @@
             <!-- Mail Fields -->
             <div id="mailFields" class="contact-fields" style="display: block;">
               <div class="form-group">
-                <label for="recipientMailName" class="form-label">First Name</label>
-                <input type="text" id="recipientMailName" class="form-control" placeholder="Your first name" required="">
+                <label for="recipientMailName" class="form-label">Full Name</label>
+                <input type="text" id="recipientMailName" class="form-control" placeholder="Your full name" required="">
               </div>
               <div class="form-group">
                 <label for="recipientAddress1" class="form-label">Address Line 1</label>
@@ -130,7 +133,7 @@
             </div>
 
             <div class="form-group">
-              <label for="requestedAmount" class="form-label">How much do you need to borrow each month?</label>
+              <label for="requestedAmount" class="form-label">How much are you requesting to borrow each month?</label>
               <div class="input-with-prefix">
                 <span class="input-prefix">$</span>
                 <input type="number" id="requestedAmount" class="form-control" min="0" step="1" placeholder="0">
@@ -155,8 +158,8 @@
             <h3 class="section-title">Your Information</h3>
             
             <div class="form-group">
-              <label for="lenderFirstName" class="form-label">First Name</label>
-              <input type="text" id="lenderFirstName" class="form-control" required="" placeholder="Your first name">
+              <label for="lenderFirstName" class="form-label">Full Name</label>
+              <input type="text" id="lenderFirstName" class="form-control" required="" placeholder="Your full name">
             </div>
 
             <div class="form-group">
@@ -177,7 +180,6 @@
                 <span class="input-prefix">$</span>
                 <input type="number" id="loanAmount" class="form-control" required="" min="0" step="1" placeholder="0">
               </div>
-              <small class="form-help">Loans will be repaid with SNAP retroactive benefits once the shutdown ends</small>
             </div>
 
             <div class="form-actions">
